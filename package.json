@@ -1,0 +1,26 @@
+{
+  "name": "mscontainer",
+  "version": "0.0.1",
+  "description": "microservice container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lecle/mscontainer.git"
+  },
+  "keywords": [
+    "microservice"
+  ],
+  "author": "Daesun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lecle/mscontainer/issues"
+  },
+  "homepage": "https://github.com/lecle/mscontainer",
+  "dependencies": {
+    "mocha": "~2.0.1",
+    "assert": "~1.2.0"
+  }
+}
