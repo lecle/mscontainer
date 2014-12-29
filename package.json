@@ -21,6 +21,8 @@
   "homepage": "https://github.com/lecle/mscontainer",
   "dependencies": {
     "mocha": "~2.0.1",
-    "assert": "~1.2.0"
+    "assert": "~1.2.0",
+    "request": "~2.51.0",
+    "qs": "~2.3.3"
   }
 }
