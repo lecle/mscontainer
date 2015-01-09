@@ -1,1 +1,1 @@
-module.exports = require('lib/container');
+module.exports = require('./lib/container');
