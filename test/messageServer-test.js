@@ -16,4 +16,16 @@ describe('messageServer', function() {
         });
     });
 
+    describe('#on()', function() {
+        it('should register event handler without error', function(done) {
+
+            messageServer.on('test', function(err, req, res) {
+
+
+                done();
+            });
+
+            messageServer.emit('test');
+        });
+    });
 });
