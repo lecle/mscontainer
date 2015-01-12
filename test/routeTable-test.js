@@ -8,10 +8,11 @@ describe('routeTable', function() {
             routeTable.setRouteTable({
                 'MANAGER': {
                     'serviceName' : 'MANAGER',
-                    'serviceInfo' : {
-                        'moduleName' : 'manager-service',
+                    'moduleName' : 'managerservice',
+                    'direction' : [{
                         'ip' : '127.0.0.1',
-                        'port' : 80}
+                        'port' : 80
+                    }]
                 }
             });
 
