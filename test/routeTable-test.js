@@ -21,6 +21,16 @@ describe('routeTable', function() {
                 done(err);
             });
         });
+
+        it('should add and remove without error', function(done) {
+
+            // test data
+            routeTable.add('MANAGER', 'managerservice', {'ip' : '127.0.0.1', 'port' : 80});
+            routeTable.add('MANAGER', 'managerservice', {'ip' : '127.0.0.1', 'port' : 81});
+
+            routeTable.remove('MANAGER', {'ip' : '127.0.0.1', 'port' : 81});
+            done();
+        });
     });
 
 });
