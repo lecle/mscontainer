@@ -5,7 +5,7 @@ describe('container', function() {
         it('should initialize without error', function(done) {
 
             // manager service load
-            container.init('', function(err) {
+            container.init('', '', function(err) {
 
 
                 done(err);
