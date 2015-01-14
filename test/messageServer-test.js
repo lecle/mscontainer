@@ -19,13 +19,30 @@ describe('messageServer', function() {
     describe('#on()', function() {
         it('should register event handler without error', function(done) {
 
-            messageServer.on('test', function(err, req, res) {
+            messageServer.on('test', function(req, res, next) {
 
+
+                res.end('OK');
+            });
+
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8080});
+
+            client.post('test', {testcol:'value'}, function(err, res) {
 
                 done();
             });
+        });
+    });
 
-            messageServer.emit('test');
+    describe('monitor', function() {
+        it('should monitor without error', function(done) {
+
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8080});
+
+            client.get('monitor', {}, function(err, res) {
+
+                done();
+            });
         });
     });
 });
