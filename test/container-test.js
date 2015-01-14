@@ -11,6 +11,14 @@ describe('container', function() {
                 done(err);
             });
         });
+
+        it('should log without error', function(done) {
+
+            // manager service load
+            container.log('test');
+
+            done();
+        });
     });
 
 });
