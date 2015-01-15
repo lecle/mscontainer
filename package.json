@@ -4,8 +4,11 @@
   "description": "microservice container",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
-  },
+    "test": "mocha --recursive",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  }
+},
   "repository": {
     "type": "git",
     "url": "https://github.com/lecle/mscontainer.git"
@@ -23,6 +26,7 @@
     "assert": "~1.2.0",
     "body-parser": "~1.10.0",
     "connect": "~3.3.3",
+    "istanbul": "^0.3.5",
     "managerservice": "git://github.com/lecle/managerservice",
     "mocha": "~2.0.1",
     "qs": "~2.3.3",
