@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/lecle/mscontainer",
   "dependencies": {
-    "mocha": "~2.0.1",
     "assert": "~1.2.0",
-    "request": "~2.51.0",
-    "qs": "~2.3.3",
+    "body-parser": "~1.10.0",
     "connect": "~3.3.3",
-    "body-parser": "~1.10.0"
+    "managerservice": "git://github.com/lecle/managerservice",
+    "mocha": "~2.0.1",
+    "qs": "~2.3.3",
+    "request": "~2.51.0"
   }
 }
