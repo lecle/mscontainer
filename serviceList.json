@@ -1,0 +1,12 @@
+{
+  "MANAGER": {
+    "serviceName" : "MANAGER",
+    "moduleName" : "lecle/managerservice",
+    "status" : "off"
+  },
+  "HTTP": {
+    "serviceName" : "HTTP",
+    "moduleName" : "lecle/httpservice",
+    "status" : "off"
+  }
+}
