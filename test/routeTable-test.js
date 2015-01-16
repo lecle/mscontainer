@@ -9,6 +9,7 @@ describe('routeTable', function() {
                 'MANAGER': {
                     'serviceName' : 'MANAGER',
                     'moduleName' : 'managerservice',
+                    'status' : 'on',
                     'direction' : [{
                         'ip' : '127.0.0.1',
                         'port' : 80
