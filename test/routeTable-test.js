@@ -32,6 +32,13 @@ describe('routeTable', function() {
             routeTable.remove('MANAGER', {'ip' : '127.0.0.1', 'port' : 81});
             done();
         });
+
+        it('should broadcast without error', function(done) {
+
+            // test data
+            routeTable.broadcast('monitor', {}, done);
+
+        });
     });
 
 });
