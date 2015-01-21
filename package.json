@@ -4,9 +4,9 @@
   "description": "microservice container",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+    "test": "mocha --require test/support/env --recursive",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lecle/mscontainer",
   "dependencies": {
-    "assert": "~1.2.0",
+    "assert": "^1.2.0",
     "async": "^0.9.0",
     "body-parser": "~1.10.0",
     "connect": "~3.3.3",
@@ -30,6 +30,7 @@
     "json-file-plus": "^2.0.0",
     "managerservice": "git://github.com/lecle/managerservice",
     "mocha": "~2.0.1",
+    "npm": "^2.2.0",
     "qs": "~2.3.3",
     "request": "~2.51.0",
     "underscore": "^1.7.0"
