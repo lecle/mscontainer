@@ -1,12 +1,17 @@
 {
   "MANAGER": {
-    "serviceName" : "MANAGER",
-    "moduleName" : "lecle/managerservice",
-    "status" : "off"
+    "serviceName": "MANAGER",
+    "moduleName": "lecle/managerservice",
+    "status": "on"
   },
   "HTTP": {
-    "serviceName" : "HTTP",
-    "moduleName" : "lecle/httpservice",
-    "status" : "off"
+    "serviceName": "HTTP",
+    "moduleName": "lecle/httpservice",
+    "status": "off"
+  },
+  "LOG": {
+    "serviceName": "LOG",
+    "moduleName": "lecle/logservice",
+    "status": "off"
   }
 }

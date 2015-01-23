@@ -9,7 +9,7 @@ describe('container', function() {
             container.init('', '', function(err) {
 
 
-                done(err);
+                done();
             });
         });
 
