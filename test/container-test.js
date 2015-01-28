@@ -71,7 +71,7 @@ describe('container', function() {
     describe('#addListener()', function() {
         it('should addListener without error', function(done) {
 
-            container.addListener('test', function(req, res, next){next();});
+            container.addListener('test', function(req, res){});
 
             done();
         });
