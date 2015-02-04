@@ -26,10 +26,7 @@ describe('routeTable', function() {
     describe('#getService()', function() {
         it('should get a manager service without error', function(done) {
 
-            routeTable.getService('MANAGER', function(err) {
-
-                done(err);
-            });
+            routeTable.getService('MANAGER').then(function(){done();}).fail(done);
         });
     });
 

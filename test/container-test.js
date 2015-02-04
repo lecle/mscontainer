@@ -37,7 +37,7 @@ describe('container', function() {
     describe('#getService()', function() {
         it('should getService without error', function(done) {
 
-            container.getService('MANAGER', done);
+            container.getService('MANAGER').then(function(){done();}).fail(done);
         });
     });
 
