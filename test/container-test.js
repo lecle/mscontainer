@@ -1,5 +1,5 @@
 var assert = require('assert');
-var container = require('../lib/container');
+var container = new (require('../lib/container'))();
 
 describe('container', function() {
     describe('#init()', function() {
@@ -20,15 +20,6 @@ describe('container', function() {
         it('should log without error', function(done) {
 
             container.log('test');
-
-            done();
-        });
-    });
-
-    describe('#close()', function() {
-        it('should close without error', function(done) {
-
-            container.close();
 
             done();
         });
@@ -81,6 +72,15 @@ describe('container', function() {
         it('should broadcast without error', function(done) {
 
             container.broadcast('test', {}, done);
+        });
+    });
+
+    describe('#close()', function() {
+        it('should close without error', function(done) {
+
+            container.close();
+
+            done();
         });
     });
 });

@@ -1,4 +1,4 @@
-var messageServer = require('../lib/messageServer');
+var messageServer = new (require('../lib/messageServer'))();
 var MessageClient = require('../lib/messageClient');
 
 describe('messageServer', function() {
