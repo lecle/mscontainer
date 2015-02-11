@@ -56,7 +56,7 @@ describe('routeTable', function() {
 
         it('should saveRouteTable without error', function(done) {
 
-            routeTable.saveRouteTable();
+            routeTable.saveRouteTable('MANAGER');
             done();
         });
     });
