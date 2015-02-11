@@ -7,11 +7,37 @@
   "HTTP": {
     "serviceName": "HTTP",
     "moduleName": "lecle/httpservice",
-    "status": "off"
+    "status": "off",
+    "next": "NOSERVGATEWAY"
   },
   "LOG": {
     "serviceName": "LOG",
     "moduleName": "lecle/logservice",
+    "status": "off"
+  },
+  "MONGODB": {
+    "serviceName": "MONGODB",
+    "moduleName": "lecle/mongodbservice",
+    "status": "off"
+  },
+  "NOSERVGATEWAY": {
+    "serviceName": "NOSERVGATEWAY",
+    "moduleName": "lecle/noservgatewayservice",
+    "status": "off"
+  },
+  "ANALYTICS": {
+    "serviceName": "ANALYTICS",
+    "moduleName": "lecle/analyticsservice",
+    "status": "off"
+  },
+  "APPS": {
+    "serviceName": "APPS",
+    "moduleName": "lecle/appsservice",
+    "status": "off"
+  },
+  "AUTH": {
+    "serviceName": "AUTH",
+    "moduleName": "lecle/authservice",
     "status": "off"
   }
 }

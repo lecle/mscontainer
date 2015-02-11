@@ -9,7 +9,7 @@ describe('container', function() {
             container.init('', '', function(err) {
 
 
-                done();
+                setTimeout(done, 1000);
             });
         });
 
@@ -78,9 +78,10 @@ describe('container', function() {
     describe('#close()', function() {
         it('should close without error', function(done) {
 
-            container.close();
+            container.close(function() {
 
-            done();
+                done();
+            });
         });
     });
 });

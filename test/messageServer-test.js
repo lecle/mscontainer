@@ -45,4 +45,11 @@ describe('messageServer', function() {
             });
         });
     });
+
+    describe('#stop', function() {
+        it('should stop without error', function(done) {
+
+            messageServer.stop(done);
+        });
+    });
 });
