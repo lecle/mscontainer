@@ -1,7 +1,3 @@
-/**
- * Created by Daesun on 14. 9. 11.
- */
-
 var assert = require('assert');
 var container = new (require('../../lib/container'))();
 var restify = require('restify');
@@ -30,7 +26,7 @@ describe('apps-route', function() {
     after(function(done) {
         container.close(function() {
 
-            setTimeout(done, 500);
+            setTimeout(done, 1000);
         });
     });
 
