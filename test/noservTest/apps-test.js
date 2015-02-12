@@ -14,7 +14,7 @@ describe('apps-route', function() {
     before(function(done) {
         container.init('', '', function(err) {
 
-            setTimeout(done, 500);
+            setTimeout(done, 1000);
         });
 
         client = restify.createJsonClient({
