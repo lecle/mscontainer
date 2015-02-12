@@ -79,7 +79,7 @@ describe('container', function() {
 
             container.close(function() {
 
-                setTimeout(done, 500);
+                setTimeout(done, 1000);
             });
         });
     });
