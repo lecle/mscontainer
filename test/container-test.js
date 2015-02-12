@@ -8,8 +8,7 @@ describe('container', function() {
             // manager service load
             container.init('', '', function(err) {
 
-
-                setTimeout(done, 1000);
+                setTimeout(done, 500);
             });
         });
 
@@ -80,7 +79,7 @@ describe('container', function() {
 
             container.close(function() {
 
-                done();
+                setTimeout(done, 500);
             });
         });
     });
