@@ -137,7 +137,7 @@ describe('users-route', function() {
 
             client.post('/1/requestPasswordReset', {email:'test@test.com'}, function (err, req, res, obj) {
 
-                assert.equal(201, res.statusCode);
+                assert.equal(200, res.statusCode);
                 done();
             });
         });
