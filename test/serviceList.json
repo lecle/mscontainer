@@ -35,6 +35,11 @@
     "moduleName": "lecle/appsservice",
     "status": "off"
   },
+  "USERS": {
+    "serviceName": "USERS",
+    "moduleName": "lecle/usersservice",
+    "status": "off"
+  },
   "AUTH": {
     "serviceName": "AUTH",
     "moduleName": "lecle/authservice",
