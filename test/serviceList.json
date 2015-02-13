@@ -45,6 +45,11 @@
     "moduleName": "lecle/classesservice",
     "status": "off"
   },
+  "INSTALLATIONS": {
+    "serviceName": "INSTALLATIONS",
+    "moduleName": "lecle/installationsservice",
+    "status": "off"
+  },
   "AUTH": {
     "serviceName": "AUTH",
     "moduleName": "lecle/authservice",
