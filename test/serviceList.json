@@ -40,6 +40,11 @@
     "moduleName": "lecle/usersservice",
     "status": "off"
   },
+  "CLASSES": {
+    "serviceName": "CLASSES",
+    "moduleName": "lecle/classesservice",
+    "status": "off"
+  },
   "AUTH": {
     "serviceName": "AUTH",
     "moduleName": "lecle/authservice",
