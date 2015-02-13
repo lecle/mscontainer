@@ -55,6 +55,11 @@
     "moduleName": "lecle/filesservice",
     "status": "off"
   },
+  "PUSH": {
+    "serviceName": "PUSH",
+    "moduleName": "lecle/pushservice",
+    "status": "off"
+  },
   "AUTH": {
     "serviceName": "AUTH",
     "moduleName": "lecle/authservice",
