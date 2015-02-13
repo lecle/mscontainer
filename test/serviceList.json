@@ -50,6 +50,11 @@
     "moduleName": "lecle/installationsservice",
     "status": "off"
   },
+  "FILES": {
+    "serviceName": "FILES",
+    "moduleName": "lecle/filesservice",
+    "status": "off"
+  },
   "AUTH": {
     "serviceName": "AUTH",
     "moduleName": "lecle/authservice",
