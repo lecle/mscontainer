@@ -1,0 +1,13 @@
+{
+    "mongodb":{
+        "host":"127.0.0.1",
+        "port":27017,
+        "db":"noservdb",
+        "username":"",
+        "password":""
+    },
+    "server":{
+        "url":"http://localhost:2337",
+        "port":2337
+    }
+}
