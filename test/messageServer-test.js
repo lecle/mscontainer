@@ -34,6 +34,42 @@ describe('messageServer', function() {
         });
     });
 
+    describe('#on() - return error', function() {
+        it('should register event handler with error', function(done) {
+
+            messageServer.on('test3', function(req, res, next) {
+
+
+                res.error(new Error('test3'));
+            });
+
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+
+            client.del('test3', {testcol:'value'}, function(err, res) {
+
+                done();
+            });
+        });
+    });
+
+    describe('#on() - return error with error code', function() {
+        it('should register event handler with error code', function(done) {
+
+            messageServer.on('test4', function(req, res, next) {
+
+
+                res.error(500, new Error('test4'));
+            });
+
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+
+            client.put('test4', {testcol:'value'}, function(err, res) {
+
+                done();
+            });
+        });
+    });
+
     describe('monitor', function() {
         it('should monitor without error', function(done) {
 
