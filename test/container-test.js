@@ -74,6 +74,24 @@ describe('container', function() {
         });
     });
 
+    describe('#getConfig()', function() {
+        it('should getConfig without error', function(done) {
+
+            assert(container.getConfig());
+
+            process.env.NODE_ENV = 'local';
+            assert(container.getConfig());
+
+            process.env.NODE_ENV = 'deploy';
+            assert(container.getConfig());
+
+            process.env.NODE_ENV = 'test';
+
+            done();
+
+        });
+    });
+
     describe('#close()', function() {
         it('should close without error', function(done) {
 

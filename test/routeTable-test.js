@@ -1,4 +1,5 @@
 var routeTable = require('../lib/routeTable');
+var assert = require('assert');
 
 describe('routeTable', function() {
 
@@ -66,6 +67,16 @@ describe('routeTable', function() {
         it('should setStatus without error', function(done) {
 
             routeTable.setStatus('MANAGER', 'on');
+            done();
+        });
+    });
+
+    describe('#getStatus()', function() {
+
+        it('should getStatus without error', function(done) {
+
+            assert(routeTable.getStatus('MANAGER'));
+            assert.equal('', routeTable.getStatus('testtesttest!@#'));
             done();
         });
     });
