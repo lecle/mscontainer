@@ -26,7 +26,7 @@ describe('apps-route', function() {
     after(function(done) {
         container.close(function() {
 
-            setTimeout(done, 1000);
+            setTimeout(done, 2000);
         });
     });
 
