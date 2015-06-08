@@ -20,4 +20,14 @@ describe('logger', function() {
             done();
         });
     });
+
+    describe('#debug()', function () {
+        it('should log without error', function (done) {
+
+            log.debug('test');
+            log.debug('test', {test : 'data'});
+
+            done();
+        });
+    });
 });
