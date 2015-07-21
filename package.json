@@ -32,9 +32,9 @@
     "q": "^1.1.2",
     "qs": "^2.3.3",
     "request": "~2.51.0",
-    "s3-streamlogger": "^0.2.0",
     "underscore": "^1.7.0",
-    "winston": "^1.0.0"
+    "winston": "^1.0.0",
+    "winston-s3": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "~1.21.4",
