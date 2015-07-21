@@ -4,4 +4,5 @@ node_js:
 services:
   - mongodb
 script: "npm run-script test-travis"
+before_script: "mkdir logs"
 after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
