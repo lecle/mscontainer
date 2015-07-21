@@ -1,13 +1,21 @@
-var messageServer = new (require('../lib/messageServer'))();
+var dummyContainer = {
+    log : {
+        info : function(){},
+        error : function() {},
+        debug : function() {}
+    }
+};
+
+var messageServer = new (require('../lib/messageServer'))(dummyContainer);
 var MessageClient = require('../lib/messageClient');
 
 describe('messageServer', function() {
     describe('#start()', function() {
         it('should start without error', function(done) {
 
-            messageServer.start(8088);
+            messageServer.start(8088, dummyContainer);
 
-            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088}, dummyContainer);
 
             client.post('testcommand', {testcol:'value'}, function(err, res) {
 
@@ -25,7 +33,7 @@ describe('messageServer', function() {
                 res.send({test:'data',test2:{test3:'data2'}});
             });
 
-            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088}, dummyContainer);
 
             client.post('test2', {testcol:'value'}, function(err, res) {
 
@@ -43,7 +51,7 @@ describe('messageServer', function() {
                 res.error(new Error('test3'));
             });
 
-            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088}, dummyContainer);
 
             client.del('test3', {testcol:'value'}, function(err, res) {
 
@@ -61,7 +69,7 @@ describe('messageServer', function() {
                 res.error(500, new Error('test4'));
             });
 
-            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088}, dummyContainer);
 
             client.put('test4', {testcol:'value'}, function(err, res) {
 
@@ -73,7 +81,7 @@ describe('messageServer', function() {
     describe('monitor', function() {
         it('should monitor without error', function(done) {
 
-            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088});
+            var client = new MessageClient('test', {ip : '127.0.0.1', port : 8088}, dummyContainer);
 
             client.get('monitor', {}, function(err, res) {
 

@@ -1,6 +1,14 @@
 var routeTable = require('../lib/routeTable');
 var assert = require('assert');
 
+var dummyContainer = {
+    log : {
+        info : function(){},
+        error : function() {},
+        debug : function() {}
+    }
+};
+
 describe('routeTable', function() {
 
     describe('#setRouteTable()', function() {
@@ -27,7 +35,7 @@ describe('routeTable', function() {
     describe('#getService()', function() {
         it('should get a manager service without error', function(done) {
 
-            routeTable.getService('MANAGER').then(function(){done();}).fail(done);
+            routeTable.getService('MANAGER', dummyContainer).then(function(){done();}).fail(done);
         });
     });
 
@@ -49,7 +57,7 @@ describe('routeTable', function() {
         it('should broadcast without error', function(done) {
 
             // test data
-            routeTable.broadcast('monitor', {}, done);
+            routeTable.broadcast('monitor', {}, dummyContainer, done);
         });
     });
 
