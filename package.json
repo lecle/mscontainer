@@ -34,6 +34,7 @@
     "request": "~2.51.0",
     "underscore": "^1.7.0",
     "winston": "^1.0.0",
+    "winston-daily-rotate-file": "^1.0.1",
     "winston-s3": "^1.0.0"
   },
   "devDependencies": {
