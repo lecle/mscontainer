@@ -6,8 +6,8 @@ var dummyContainer = {
     }
 };
 
-var messageServer = new (require('../lib/messageServer'))(dummyContainer);
-var MessageClient = require('../lib/messageClient');
+var messageServer = new (require('../lib/adapters/server'))(dummyContainer);
+var MessageClient = require('../lib/adapters/client');
 
 describe('messageServer', function() {
     describe('#start()', function() {
