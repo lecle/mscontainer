@@ -4,9 +4,9 @@
   "description": "microservice container",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test/support/env --recursive --timeout 30000",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --timeout 30000 --require test/support/env --reporter dot test/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --recursive --timeout 30000 --require test/support/env --reporter spec test/"
+    "test": "mocha --require test/support/env --recursive --timeout 70000",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --timeout 70000 --require test/support/env --reporter dot test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --recursive --timeout 70000 --require test/support/env --reporter spec test/"
   },
   "repository": {
     "type": "git",
